@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task2</title>
+  </head>
+  <body>
+    <a href="https://www.example.com">Example Link 1</a>
+    <a href="http://www.example.com">Example Link 2</a>
+    <a href="https://www.google.com">Example Link 3</a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      // На HTML-сторінці є посилання <a>. У випадку коли, href починається на
+      // https://, потрібно додати посиланню атрибут target="_blank".
+      //===========================================================
+
+      $("a").each(function () {
+        // вибирає всі елементи прив’язки на сторінці та повторює їх
+
+        if ($(this).attr("href").startsWith("https://")) {
+          //чи атрибут href поточного елемента прив’язки починається з "https://"
+
+          $(this).attr("target", "_blank");
+          //додаєм атрибут target="_blank" до поточного елемента прив’язки
+        }
+      });
+    </script>
+  </body>
+</html>

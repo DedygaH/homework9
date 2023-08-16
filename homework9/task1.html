@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task1</title>
+    <style>
+      h2.head {
+        background-color: green;
+      }
+
+      h2.head .inner {
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="head">header1</h2>
+    <h2 class="head">header2 <span class="inner">inner elem1</span></h2>
+    <h2>header3</h2>
+    <h2 class="head">header4<span>inner elem2</span></h2>
+    <h2>header5</h2>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      
+      // Для заданої сторінки знайдіть всі <h2> з класом head, зробіть для них зелений колір фону,
+      // потім серед знайдених елементів знайдіть елементи з класом inner і поставте їм розмір шрифту 35px.
+      // <h2 class="head">header1</h2>
+      // <h2 class="head">header2 <span class="inner">inner elem1</span></h2>
+      // <h2>header3</h2>
+      // <h2 class="head">header4<span>inner elem2</span></h2>
+      // <h2>header5</h2>
+      //===============================================================
+
+      $(document).ready(function () {
+        // код запускається, коли документ буде завантажений
+
+        $("h2.head").css("background-color", "green");
+        // всі заголовки <h2> з класом head.
+
+        $("h2.head .inner").css("font-size", "35px");
+        //всі елементи з класом inner, які є дочірніми елементами заголовків <h2> з класом head
+      });
+    </script>
+  </body>
+</html>

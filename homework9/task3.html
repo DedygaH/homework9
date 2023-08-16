@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task3</title>
+  </head>
+  <body>
+    <h3>header1</h3>
+    <div>text1</div>
+    <h3>header2</h3>
+    <div>text2</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      //  Знайдіть теги <div>, які стоять безпосередньо після <h3> і перемістіть кожен
+      //  <div>-елемент так, щоб він став безпосередньо над <h3>.
+      //  <h3>header1</h3>
+      //  <div>text1</div>
+      //  <h3>header2</h3>
+      //  <div>text2</div>
+      //==========================================================
+
+      $("div").each(function () {
+        // Виберем всі div-елементи на сторінці
+
+        if ($(this).next("h3").length) {
+          // Перевіряем, чи є наступним h3-елемент
+
+          $(this).insertBefore($(this).next("h3"));
+          // Переміщаємо його перед <h3>
+        }
+      });
+    </script>
+  </body>
+</html>
